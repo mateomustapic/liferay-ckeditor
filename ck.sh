@@ -227,6 +227,7 @@ case "$COMMAND" in
 
 				downloadPlugin scayt "$VERSION"
 				downloadPlugin wsc "$VERSION"
+				downloadPlugin a11ychecker "1.1.1"
 
 				echo
 				echo "Checking for existing patches"
@@ -331,6 +332,7 @@ case "$COMMAND" in
 
 				downloadPlugin scayt "$tag"
 				downloadPlugin wsc "$tag"
+				downloadPlugin a11ychecker "1.1.1"
 
 				echo "Do you want to rebase the updated ckeditor submodule with the liferay branch?"
 				echo
