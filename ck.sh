@@ -77,6 +77,10 @@ case "$COMMAND" in
 				# Replace with new build files.
 				cp -r dev/builder/release/ckeditor/* ../ckeditor/
 
+				(cat ../node_modules/jquery/dist/jquery.min.js && cat ../ckeditor/plugins/a11ychecker/plugin.js) > ../ckeditor/plugins/a11ychecker/plugin.jquery.js
+				mv ../ckeditor/plugins/a11ychecker/plugin.jquery.js ../ckeditor/plugins/a11ychecker/plugin.js
+				rm ../ckeditor/plugins/a11ychecker/plugin.jquery.js
+
 				cd ..
 				git add ckeditor
 
@@ -227,6 +231,7 @@ case "$COMMAND" in
 
 				downloadPlugin scayt "$VERSION"
 				downloadPlugin wsc "$VERSION"
+				downloadPlugin a11ychecker "1.1.1"
 
 				echo
 				echo "Checking for existing patches"
@@ -331,6 +336,7 @@ case "$COMMAND" in
 
 				downloadPlugin scayt "$tag"
 				downloadPlugin wsc "$tag"
+				downloadPlugin a11ychecker "1.1.1"
 
 				echo "Do you want to rebase the updated ckeditor submodule with the liferay branch?"
 				echo
