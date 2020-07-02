@@ -12,7 +12,8 @@
 	"devDependencies": {
 		"@clayui/css": "^3.13.0",
 		"prettier": "2.0.4",
-		"sharp": "^0.25.4"
+		"sharp": "^0.25.4",
+		"zepto": "^1.2.0"
 	},
 	"scripts": {
 		"check:submodule": "node support/checkSubmodule.js",
